@@ -1,0 +1,7 @@
+I have included the block to add flows and improved the ASM1 model of the reactor. In the example I have implemented a reactor of two stages, one anoxic and one with aeration with control of the KLa in the latter. There is an internal recirculation and another from the decanter. For the decanter I have considered a simple model in which the concentration of the non-soluble elements in the recirculation flow is proportional to its concentration in the input stream: settler_coefficient * Xi. The recycling_factor is the fraction of the input stream that is recirculated. For proper operation, the following must be met: 1 / recycling_factor> settler_coefficient. A recirculation valve is implemented with a decanter with settler_coefficient equal to zero.
+The component_selector block allows you to select one or more elements in your input stream to view or perform other operations.
+Before running the simulink model, you must load the input stream data like the "import_data" script.
+Improved things based on BSM1:
+-Model of the decanter. It is quite complex and I am not clear that the effect of its dynamics is considerable with respect to the dynamics of the reactors.
+-Include models of the sensors according to category etc.
+-Other that may occur .........
